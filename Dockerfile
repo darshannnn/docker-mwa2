@@ -5,7 +5,7 @@ ENV APP_DIR /app
 COPY docker/requirements.txt /tmp/
 
 RUN apk add --update python py-pip libpq
-RUN apk --update add --virtual build-dependencies python2-dev build-base wget git openldap-dev \
+RUN apk --update add --virtual build-dependencies python2-dev build-base wget git openssh openldap-dev \
   && pip install -r /tmp/requirements.txt \
   && git clone https://github.com/munki/mwa2.git /app \
   && git clone https://github.com/munki/munki.git \
