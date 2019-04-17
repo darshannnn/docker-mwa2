@@ -10,7 +10,7 @@ RUN apk --update add --virtual build-dependencies python2-dev build-base wget op
   && git clone https://github.com/munki/mwa2.git /app \
   && git clone https://github.com/munki/munki.git \
   && git config --global user.email "mwa@github.com \
-  && git config --global user.name "Munki Web Admin"
+  && git config --global user.name "Munki Web Admin" \
   && mkdir -p /usr/local/munki \
   && mv /munki/code/client/makecatalogs /usr/local/munki/makecatalogs \
   && rm -rf /munki \
