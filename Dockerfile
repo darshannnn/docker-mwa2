@@ -4,10 +4,10 @@ ENV APP_DIR /app
 
 COPY docker/requirements.txt /tmp/
 
-RUN apk add --update python py-pip libpq git ssh
+RUN apk add --update python py-pip libpq git openssh
 RUN apk --update add --virtual build-dependencies python2-dev build-base wget openldap-dev \
   && pip install -r /tmp/requirements.txt \
-  && git clone https://github.com/munki/mwa2.git /app \
+  && git clone https://github.com/darshannnn/mwa2.git /app \
   && git clone https://github.com/munki/munki.git \
   && git config --global user.email "mwa@github.com" \
   && git config --global user.name "Munki Web Admin" \
