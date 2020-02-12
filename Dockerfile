@@ -12,6 +12,7 @@ RUN apk --update add --virtual build-dependencies python2-dev build-base wget op
   && git config --global user.email "mwa@github.com" \
   && git config --global user.name "Munki Web Admin" \
   && mkdir -p /usr/local/munki \
+  && mkdir -p /var/log/django \
   && mv /munki/code/client/makecatalogs /usr/local/munki/makecatalogs \
   && mv /munki/code/client/munkilib /usr/local/munki/munkilib \
   && rm -rf /munki \
